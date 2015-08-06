@@ -33,8 +33,8 @@ var targets []imageTarget = []imageTarget{
 	{"facebook_square_small", 200, 200},
 	{"facebook_square", 630, 630},
 	{"facebook_share", 1200, 630},
-	{"blog_large", 617, 242},
-	{"blog_thumb", 293, 118},
+	{"blog_large", 1234, 484},
+	{"blog_thumb", 586, 236},
 	{"twitter_large", 1200, 626},
 }
 
