@@ -35,7 +35,7 @@ var targets []imageTarget = []imageTarget{
 	{"facebook_share", 1200, 628},
 	{"blog_large", 617, 242},
 	{"blog_thumb", 293, 118},
-	{"twitter_large", 1200, 643},
+	{"twitter_large", 1172, 628},
 }
 
 func maxInt(a, b int) int {
