@@ -20,7 +20,7 @@ const SOI_MARKER = 0xd8
 const (
 	imagePath = "static/images/posts"
 	imageResX = 1200
-	imageResY = 643
+	imageResY = 630
 )
 
 type imageTarget struct {
@@ -31,11 +31,11 @@ type imageTarget struct {
 
 var targets []imageTarget = []imageTarget{
 	{"facebook_square_small", 200, 200},
-	{"facebook_square", 628, 628},
-	{"facebook_share", 1200, 628},
+	{"facebook_square", 630, 630},
+	{"facebook_share", 1200, 630},
 	{"blog_large", 617, 242},
 	{"blog_thumb", 293, 118},
-	{"twitter_large", 1172, 628},
+	{"twitter_large", 1200, 626},
 }
 
 func maxInt(a, b int) int {
