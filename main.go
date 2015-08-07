@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"image"
-	"image/png"
+	"image/jpeg"
 	"log"
 	"os"
 	"path/filepath"
@@ -121,7 +121,8 @@ func resizeImage(filename string, img image.Image, resX, resY int) error {
 	defer f.Close()
 
 	w := bufio.NewWriter(f)
-	err = png.Encode(w, res)
+	quality := &jpeg.Options{Quality: 90}
+	err = jpeg.Encode(w, res, quality)
 	if err != nil {
 		return err
 	}
@@ -144,7 +145,7 @@ func handleFile(fileName string) error {
 					return err
 				}
 
-				img, err := png.Decode(r)
+				img, err := jpeg.Decode(r)
 				r.Close()
 				if err != nil {
 					return err
@@ -205,7 +206,7 @@ func main() {
 	}
 
 	for _, fileName := range matches {
-		if !strings.Contains(fileName, ".png") {
+		if !strings.Contains(fileName, ".jpg") {
 			continue
 		}
 
